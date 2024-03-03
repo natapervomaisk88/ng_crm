@@ -15,4 +15,6 @@ export class AppComponent {
     'Angular - це фреймворк от компании Google',
     'Через {{variable}} - можна робити інтерполяцію',
   ];
+  version: string = 'v17';
+  image: string = 'assets/images/angular.png';
 }
