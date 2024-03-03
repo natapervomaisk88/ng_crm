@@ -55,6 +55,9 @@
       <p>[(ngModel)]="username"</p>
       <input type="text" name="username" [(ngModel)]="username" />
       <p><b>Hello </b> {{ username }}</p>
+      <button type="button" (click)="changeData()" class="btn btn-primary">
+        Change Name
+      </button>
     </div>
   </div>
 </div>

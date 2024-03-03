@@ -23,4 +23,7 @@ export class AppComponent {
   showInfo(): void {
     alert('Clicked');
   }
+  changeData(): void {
+    this.username = 'Default';
+  }
 }
