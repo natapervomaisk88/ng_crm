@@ -16,6 +16,7 @@
   </div>
   <hr />
   <div class="row">
+    <h2>One-Way Binding</h2>
     <div class="col" [title]="version">
       <b>Остання версія фреймворку</b>
       <p>
@@ -29,6 +30,31 @@
         до даних в компоненті, автоматично відображаються в шаблоні, але не
         навпаки.
       </p>
+    </div>
+  </div>
+  <hr />
+  <div class="row mt-4">
+    <h2>Two-Way Binding</h2>
+    <div class="col-12 mb-3">
+      <br />
+      <button type="button" (click)="showInfo()" class="btn btn-primary">
+        Click
+      </button>
+      <p>
+        У файлі з класом компоненти app.component.ts додано метод showInfo() -
+        він виклакається після кліку. (click)="showInfo()"
+      </p>
+      <hr />
+    </div>
+    <div class="col-12">
+      <p>Тут так званий "Банан у коробці"<img [src]="image_banana" alt="" /></p>
+      <p>
+        Треба обов'язково підключити модуль FormsModule в imports у файлі
+        компоненти
+      </p>
+      <p>[(ngModel)]="username"</p>
+      <input type="text" name="username" [(ngModel)]="username" />
+      <p><b>Hello </b> {{ username }}</p>
     </div>
   </div>
 </div>
