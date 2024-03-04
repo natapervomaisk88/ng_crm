@@ -3,13 +3,22 @@ import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { ArticleComponent } from './components/article/article.component';
 import { TableComponent } from './components/table/table.component';
+import { CommonModule } from '@angular/common';
+import { TitlePipe } from './pipes/title.pipe';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, FormsModule, ArticleComponent, TableComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss',
+    imports: [
+        RouterOutlet,
+        FormsModule,
+        ArticleComponent,
+        TableComponent,
+        CommonModule,
+        TitlePipe
+    ]
 })
 export class AppComponent {
   title: string = 'ng_crm';
@@ -22,10 +31,18 @@ export class AppComponent {
   image: string = 'assets/images/angular.png';
   username: string = 'Guest';
   image_banana = 'assets/images/banana.jpg';
+  pipes_test: Array<any> = [this.title, new Date(), 17, 3.1415926535, 0.77];
   showInfo(): void {
     alert('Clicked');
   }
   changeData(): void {
     this.username = 'Default';
   }
+  /*
+  TODO: добавить создание своих pipes
+  Передачу данных между компонентами
+  Работу с сервисами, запросы на сервер
+  Роутинг
+  Dependeny Injection
+  */
 }

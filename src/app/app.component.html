@@ -70,4 +70,48 @@
   <app-article></app-article>
   <hr />
   <app-table></app-table>
+  <hr />
+  <div class="row">
+    <div class="col-12">
+      <h2>Pipes</h2>
+      <p>
+        <b>Pipes </b> -вказують на функціональні елементи, які використовуються
+        для обробки та відображення даних у шаблонах Angular. Pipes надають
+        можливість виконувати різні операції перетворення даних без необхідності
+        змінювати їх вихідний вигляд.
+      </p>
+      <ul class="list-group">
+        <li class="list-group-item">
+          Pipe <b>uppercase</b> {{ pipes_test[0] | uppercase }}
+        </li>
+        <li class="list-group-item">
+          Pipe <b>Date</b> {{ pipes_test[1] | date : "yyyy-MM-dd" }}
+        </li>
+        <li class="list-group-item">
+          <b>DatePipe</b> {{ pipes_test[1] | date : "HH:mm" }}
+        </li>
+        <li class="list-group-item">
+          <b>CurrencyPipe </b>
+          {{ pipes_test[2] | currency : "USD" : "symbol" : "1.2-2" }}
+        </li>
+        <li class="list-group-item">
+          <b>NumberPipe</b> {{ pipes_test[3] | number : "1.2-2" }}
+        </li>
+        <li class="list-group-item">
+          <b>PercentPipe</b> {{ pipes_test[4] | percent }}
+        </li>
+        <li class="list-group-item">
+          <b>SlicePipe</b> {{ "Angular/React" | slice : 0 : 7 }}
+        </li>
+      </ul>
+    </div>
+    <hr />
+    <div class="col-12 mt-3">
+      <h2>Створення власних Pipes</h2>
+      <p>1) Генерація: ng generate pipe /pipes/title</p>
+      <p>2) Підключення в imports</p>
+      <p>{{ "Custom Pipe" | title }}</p>
+    </div>
+  </div>
+  <hr />
 </div>
