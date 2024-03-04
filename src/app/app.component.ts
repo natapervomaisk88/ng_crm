@@ -7,18 +7,19 @@ import { CommonModule } from '@angular/common';
 import { TitlePipe } from './pipes/title.pipe';
 
 @Component({
-    selector: 'app-root',
-    standalone: true,
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.scss',
-    imports: [
-        RouterOutlet,
-        FormsModule,
-        ArticleComponent,
-        TableComponent,
-        CommonModule,
-        TitlePipe
-    ]
+  selector: 'app-root',
+  standalone: true,
+  imports: [
+    RouterOutlet,
+    FormsModule,
+    ArticleComponent,
+    TableComponent,
+    CommonModule,
+    TitlePipe,
+  ],
+
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title: string = 'ng_crm';
@@ -38,11 +39,4 @@ export class AppComponent {
   changeData(): void {
     this.username = 'Default';
   }
-  /*
-  TODO: добавить создание своих pipes
-  Передачу данных между компонентами
-  Работу с сервисами, запросы на сервер
-  Роутинг
-  Dependeny Injection
-  */
 }
