@@ -5,7 +5,9 @@ import { ArticleComponent } from './components/article/article.component';
 import { TableComponent } from './components/table/table.component';
 import { CommonModule } from '@angular/common';
 import { TitlePipe } from './pipes/title.pipe';
-
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SharedDataService } from './services/shared-data.service';
+import { HeaderComponent } from './components/header/header.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -14,29 +16,16 @@ import { TitlePipe } from './pipes/title.pipe';
     FormsModule,
     ArticleComponent,
     TableComponent,
+    NavbarComponent,
+    HeaderComponent,
     CommonModule,
     TitlePipe,
   ],
+  providers: [SharedDataService],
 
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title: string = 'ng_crm';
-  content: Array<string> = [
-    'Angular - це сучасний фреймворк для розробки веб-додатків',
-    'Angular - це фреймворк от компании Google',
-    'Через {{variable}} - можна робити інтерполяцію',
-  ];
-  version: string = 'v17';
-  image: string = 'assets/images/angular.png';
-  username: string = 'Guest';
-  image_banana = 'assets/images/banana.jpg';
-  pipes_test: Array<any> = [this.title, new Date(), 17, 3.1415926535, 0.77];
-  showInfo(): void {
-    alert('Clicked');
-  }
-  changeData(): void {
-    this.username = 'Default';
-  }
+  constructor(private sharedData: SharedDataService) {}
 }
