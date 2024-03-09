@@ -8,6 +8,7 @@ import { TitlePipe } from './pipes/title.pipe';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SharedDataService } from './services/shared-data.service';
 import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -18,6 +19,7 @@ import { HeaderComponent } from './components/header/header.component';
     TableComponent,
     NavbarComponent,
     HeaderComponent,
+    FooterComponent,
     CommonModule,
     TitlePipe,
   ],
