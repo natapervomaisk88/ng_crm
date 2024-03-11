@@ -1,0 +1,18 @@
+<div class="row">
+  <div
+    class="card col-4 m-auto"
+    style="width: 18rem"
+    *ngFor="let article of articles"
+  >
+    <img class="card-img-top" src="{{ article.image }}" alt="Card image cap" />
+    <div class="card-body">
+      <h5 class="card-title">{{ article.title }}</h5>
+      <p class="card-text">
+        {{ article.description }}
+      </p>
+      <a [routerLink]="['/article', article.id]" class="btn btn-primary"
+        >Go Detail Info
+      </a>
+    </div>
+  </div>
+</div>
