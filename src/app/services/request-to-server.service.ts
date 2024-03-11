@@ -13,6 +13,7 @@ export class RequestToServerService {
     return this.httpClient.get(url);
   }
   getArticleById(id: number): Observable<any> {
+    console.log(id);
     const url = `${this.API_URL}/articles/${id}`;
     return this.httpClient.get(url);
   }
