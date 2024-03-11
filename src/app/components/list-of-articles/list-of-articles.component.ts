@@ -4,11 +4,12 @@ import { catchError } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { Article } from '../../../model/articles.model';
 import { RouterLink } from '@angular/router';
+import { InputArticleComponent } from '../input-article/input-article.component';
 
 @Component({
   selector: 'app-list-of-articles',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, InputArticleComponent],
   templateUrl: './list-of-articles.component.html',
   styleUrl: './list-of-articles.component.scss',
 })
